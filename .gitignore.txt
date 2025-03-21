@@ -1,0 +1,56 @@
+# Archivos del sistema (Windows/Mac)
+.DS_Store
+Thumbs.db
+
+# Archivos temporales de Power BI
+*.pbix~
+*.tmp
+
+# Archivos temporales de R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Checkpoints de Jupyter (si usas notebooks más adelante)
+*.ipynb_checkpoints/
+
+# Archivos temporales de Sublime Text o Merge
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+*.log
+
+# Copias de seguridad
+*.bak
+*.old
+*.tmp
+
+
+# Entornos virtuales Python
+venv/
+*/venv/
+
+# Archivos de Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Checkpoints de Jupyter (ya los tienes, bien)
+*.ipynb_checkpoints/
+
+# Documentos virtuales de JupyterLab
+.virtual_documents/
+
+# Bases de datos locales o temporales
+*.db
+
+# Archivos y carpetas de VSCode (por si acaso)
+.vscode/
+
+# Archivos ocultos comunes
+*.DS_Store
+Thumbs.db
+
+# Archivos temporales de Anaconda
+anaconda_projects/

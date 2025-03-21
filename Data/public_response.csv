@@ -1,0 +1,25 @@
+film,rotten_tomatoes,metacritic,cinema_score,critics_choice
+Toy Story,100.0,95.0,A,
+A Bug's Life,92.0,77.0,A,
+Toy Story 2,100.0,88.0,A+,100.0
+"Monsters, Inc.",96.0,79.0,A+,92.0
+Finding Nemo,99.0,90.0,A+,97.0
+The Incredibles,97.0,90.0,A+,88.0
+Cars,74.0,73.0,A,89.0
+Ratatouille,96.0,96.0,A,91.0
+WALL-E,95.0,95.0,A,90.0
+Up,98.0,88.0,A+,95.0
+Toy Story 3,98.0,92.0,A,97.0
+Cars 2,40.0,57.0,A-,67.0
+Brave,78.0,69.0,A,81.0
+Monsters University,80.0,65.0,A,79.0
+Inside Out,98.0,94.0,A,93.0
+The Good Dinosaur,76.0,66.0,A,75.0
+Finding Dory,94.0,77.0,A,89.0
+Cars 3,69.0,59.0,A,66.0
+Coco,97.0,81.0,A+,89.0
+Incredibles 2,93.0,80.0,A+,86.0
+Toy Story 4,97.0,84.0,A,94.0
+Onward,88.0,61.0,A-,79.0
+Soul,96.0,83.0,,93.0
+Luca,,,,
