@@ -29,40 +29,40 @@ st.markdown(
         }
         .custom-title {
             font-family: 'Cinzel', serif;
-            font-size: 48px;
+            font-size: 40px;  /* Reducido un poco */
             color: #333333;
         }
         .kpi-container {
             display: flex;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 40px;
+            justify-content: center;  /* Centrado para pantallas grandes */
+            flex-wrap: nowrap; /* Que no salten */
+            gap: 10px;
+            margin-bottom: 30px;
         }
         .kpi-box {
-            flex: 1 1 250px; /* Permite que crezca y reduzca, con base de 250px */
-            max-width: 300px; /* Para que no se estiren mucho en pantallas grandes */
+            flex: 1 1 200px;  /* Más flexible */
+            max-width: 260px;
+            min-width: 180px;
             background-color: #bcbcbc;
-            padding: 8px 5px;
-            height: 100px;
+            padding: 6px 4px;
+            height: auto;
             border-radius: 10px;
             text-align: center;
         }
         .kpi-title {
             color: #333;
-            font-size: 16px;
-            margin-bottom: -15px;
+            font-size: 14px;
+            margin-bottom: -10px;
         }
         .kpi-value {
             color: #1f77b4;
-            font-size: 18px;
-            margin-top: 0px;
+            font-size: 17px;
+            margin-top: 2px;
         }
     </style>
     """,
     unsafe_allow_html=True,
 )
-
 
 # -----------------------------------------------------------------------------------
 # ---- TÍTULO ----
