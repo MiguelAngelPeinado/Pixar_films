@@ -300,8 +300,6 @@ def render_additional_charts(df, selected_year):
 
     fig_scatter.update_traces(marker=dict(size=12, line=dict(width=1, color="#333333")))
     fig_scatter.update_layout(
-        # width=700,
-        # height=600,
         title_font=dict(size=18, family="Arial Black", color="#333333"),
         xaxis_title_font=dict(size=14, family="Arial Black", color="#333333"),
         yaxis_title_font=dict(size=14, family="Arial Black", color="#333333"),
@@ -312,13 +310,13 @@ def render_additional_charts(df, selected_year):
             titlefont=dict(color="#333333"),
         ),
         xaxis=dict(
-            tickfont=dict(color="#333333"),  # <-- Color números eje X
+            tickfont=dict(color="#333333"),
             title_font=dict(size=14, family="Arial Black", color="#333333"),
             showgrid=True,
             gridcolor="lightgrey",
         ),
         yaxis=dict(
-            tickfont=dict(color="#333333"),  # <-- Color números eje Y
+            tickfont=dict(color="#333333"),
             title_font=dict(size=14, family="Arial Black", color="#333333"),
             showgrid=True,
             gridcolor="lightgrey",
@@ -369,8 +367,6 @@ def render_additional_charts(df, selected_year):
             borderwidth=1,
             font=dict(size=12, color="#333333"),
         ),
-        # width=700,
-        # height=600,
         plot_bgcolor="#f5f5f5",
         paper_bgcolor="#f5f5f5",
         xaxis=dict(
@@ -392,13 +388,13 @@ def render_additional_charts(df, selected_year):
     # -------------- MOSTRAR EN DOS COLUMNAS -----------------
     col1, col2 = st.columns(2)
     with col1:
-        st.plotly_chart(fig_scatter)
+        st.plotly_chart(fig_scatter, use_container_width=True)
         st.markdown(
             "<p style='color: #333333; font-size: 16px; text-align: center;'>Higher budgets often correlate with higher worldwide box office revenue, but outliers suggest budget alone doesn't guarantee success.</p>",
             unsafe_allow_html=True,
         )
     with col2:
-        st.plotly_chart(fig_scores)
+        st.plotly_chart(fig_scores, use_container_width=True)
         st.markdown(
             "<p style='color: #333333; font-size: 16px; text-align: center;'>Critics' ratings fluctuate over the years, with some years showing a clear divergence between Rotten Tomatoes and Metacritic scores.</p>",
             unsafe_allow_html=True,
