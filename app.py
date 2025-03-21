@@ -312,6 +312,7 @@ def render_additional_charts(df, selected_year):
                 font=dict(color="#333333"),
             ),
         ),
+        height=600,
         xaxis=dict(
             tickfont=dict(color="#333333"),
             title_font=dict(size=14, family="Arial Black", color="#333333"),
@@ -358,6 +359,7 @@ def render_additional_charts(df, selected_year):
         title_font=dict(size=18, family="Arial Black", color="#333333"),
         xaxis_title="Year",
         yaxis_title="Score (0-100)",
+        height=600,
         legend=dict(
             title="",
             orientation="h",
