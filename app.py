@@ -43,7 +43,7 @@ st.markdown(
             flex: 1 1 215px;
             max-width: 260px;
             min-width: 180px;
-            background-color: #bcbcbc;
+            background-color: lightgray;
             padding: 6px 4px;
             height: auto;
             border-radius: 10px;
