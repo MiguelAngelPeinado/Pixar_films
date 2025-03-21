@@ -51,8 +51,8 @@ st.markdown(
         }
         .kpi-title {
             color: #333;
-            font-size: 13px;
-            margin-bottom: -5px;
+            font-size: 15px;
+            margin-bottom: 5px;
             font-weight: bold;
         }
         .kpi-value {
@@ -64,6 +64,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
 
 # -----------------------------------------------------------------------------------
 # ---- TÍTULO ----
@@ -83,7 +84,9 @@ def render_title():
 # ---- KPIs ----
 def render_kpis():
     total_box_office = df["box_office_worldwide"].sum()
-    most_productive_year = int(df.groupby("year")["box_office_worldwide"].sum().idxmax())
+    most_productive_year = int(
+        df.groupby("year")["box_office_worldwide"].sum().idxmax()
+    )
     most_profitable_film = df.loc[df["profit_margin"].idxmax()]["film"]
 
     st.subheader("Key Metrics")
