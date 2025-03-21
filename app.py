@@ -536,7 +536,7 @@ def render_film_selector(df):
         <style>
         /* Fondo y borde para el selectbox */
         div[data-baseweb="select"] {
-            background-color: #bcbcbc;
+            background-color: lightgrey;
             border: 1px solid tomato;
             border-radius: 8px;
             padding: 5px;
