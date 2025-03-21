@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 # -----------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------
 # ---- CONFIGURACIÓN GLOBAL ----
 st.set_page_config(
     page_title="Pixar Films Dashboard",
@@ -40,7 +41,6 @@ st.markdown(
             flex-wrap: wrap;
         }
         .kpi-box {
-            background-color: #bcbcbc;
             padding: 8px 5px;
             height: 100px;
             border-radius: 10px;
@@ -49,20 +49,41 @@ st.markdown(
             margin-right: 20px;
         }
         .kpi-title {
-            color: #333;
             font-size: 18px;
             margin-bottom: -15px;
         }
         .kpi-value {
-            color: #1f77b4;
             font-size: 23px;
             margin-top: 0px;
+        }
+        /* Estilos para modo claro */
+        @media (prefers-color-scheme: light) {
+            body, .stApp {
+                background-color: #f5f5f5;
+            }
+            .custom-title, .kpi-title, .kpi-value {
+                color: #333333;
+            }
+            .kpi-box {
+                background-color: #e0e0e0;
+            }
+        }
+        /* Estilos para modo oscuro */
+        @media (prefers-color-scheme: dark) {
+            body, .stApp {
+                background-color: #262730;
+            }
+            .custom-title, .kpi-title, .kpi-value {
+                color: #f5f5f5;
+            }
+            .kpi-box {
+                background-color: #3a3b3c;
+            }
         }
     </style>
     """,
     unsafe_allow_html=True,
 )
-
 
 # -----------------------------------------------------------------------------------
 # ---- TÍTULO ----
@@ -76,7 +97,6 @@ def render_title():
         """,
         unsafe_allow_html=True,
     )
-
 
 # -----------------------------------------------------------------------------------
 # ---- KPIs ----
@@ -109,7 +129,6 @@ def render_kpis():
         unsafe_allow_html=True,
     )
 
-
 # -----------------------------------------------------------------------------------
 # ---- FILTROS SIDEBAR ----
 def render_sidebar_filters():
@@ -139,7 +158,7 @@ def render_sidebar_filters():
     )
     st.sidebar.markdown("---")
 
-    # Film rating filter
+    # Filtro de clasificación de películas
     rating_options = df["film_rating"].dropna().unique()
     selected_ratings = st.sidebar.multiselect(
         "Select Film Rating:", rating_options, default=rating_options
@@ -149,6 +168,8 @@ def render_sidebar_filters():
         unsafe_allow_html=True,
     )
     st.sidebar.markdown("---")
+
+
 
     # 🚀 CITA MOTIVACIONAL
     st.sidebar.markdown(
