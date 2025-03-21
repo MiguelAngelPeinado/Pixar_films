@@ -307,7 +307,10 @@ def render_additional_charts(df, selected_year):
         paper_bgcolor="#f5f5f5",
         coloraxis_colorbar=dict(
             tickfont=dict(color="#333333"),
-            titlefont=dict(color="#333333"),
+            title=dict(  # Aquí es donde cambia
+                text="Year",  # Texto que aparece en la barra de colores
+                font=dict(color="#333333"),
+            ),
         ),
         xaxis=dict(
             tickfont=dict(color="#333333"),
