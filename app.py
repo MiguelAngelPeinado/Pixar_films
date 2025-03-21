@@ -568,7 +568,7 @@ def render_film_selector(df):
     # Tarjeta de datos SIN borde, solo con fondo gris claro
     html(
         f"""
-        <div style="background-color: #bcbcbc; padding: 15px; border-radius: 12px; color: #333333; text-align: center; font-family: 'Source Sans Pro', sans-serif;">
+        <div style="background-color: lightgrey; padding: 15px; border-radius: 12px; color: #333333; text-align: center; font-family: 'Source Sans Pro', sans-serif;">
 
             <h3 style="color: #1f77b4; margin-bottom: 10px;">{film_data['film'].upper()} ({int(film_data['year'])})</h3>
 
