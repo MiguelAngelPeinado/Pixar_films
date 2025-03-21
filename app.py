@@ -528,14 +528,20 @@ def render_extra_critics_charts(df):
 def render_film_selector(df):
     from streamlit.components.v1 import html
 
-    # Personalizamos el estilo del selectbox
+    # Solo estilizamos el selectbox
     st.markdown(
         """
         <style>
+        /* Fondo y borde para el selectbox */
         div[data-baseweb="select"] {
             background-color: #bcbcbc;
             border: 1px solid tomato;
             border-radius: 8px;
+            padding: 5px;
+        }
+        /* Cambiar fondo del valor seleccionado */
+        div[data-baseweb="select"] div[role="button"] {
+            background-color: #bcbcbc;
         }
         </style>
         """,
@@ -557,10 +563,10 @@ def render_film_selector(df):
 
     film_data = df[df["film"] == selected_film].iloc[0]
 
-    # Tarjeta de datos de la película (mismo fondo #bcbcbc y borde opcional si quieres)
+    # Tarjeta de datos SIN borde, solo con fondo gris claro
     html(
         f"""
-        <div style="background-color: #bcbcbc; border: 1px solid tomato; padding: 15px; border-radius: 12px; color: #333333; text-align: center; font-family: 'Source Sans Pro', sans-serif;">
+        <div style="background-color: #bcbcbc; padding: 15px; border-radius: 12px; color: #333333; text-align: center; font-family: 'Source Sans Pro', sans-serif;">
 
             <h3 style="color: #1f77b4; margin-bottom: 10px;">{film_data['film'].upper()} ({int(film_data['year'])})</h3>
 
@@ -589,7 +595,7 @@ def render_film_selector(df):
 
         </div>
         """,
-        height=750,
+        height=720,
     )
 
 
