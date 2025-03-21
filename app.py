@@ -543,11 +543,11 @@ def render_film_selector(df):
 
     html(
         f"""
-        <div style="background-color: #bcbcbc; padding: 15px; border-radius: 12px; color: #333333; text-align: center; font-family: 'Source Sans Pro', sans-serif;">
+        <div style="background-color: #333333; padding: 15px; border-radius: 12px; color: #333333; text-align: center; font-family: 'Source Sans Pro', sans-serif;">
 
             <h3 style="color: #1f77b4; margin-bottom: 10px;">{film_data['film'].upper()} ({int(film_data['year'])})</h3>
 
-            <hr style="border: none; height: 1px; background-color: #999; margin: 10px 0;">
+            <hr style="border: none; height: 1px; background-color: tomato; margin: 10px 0;">
 
             <h4>📊 CRITICS</h4>
             <p><strong>🍅 Rotten Tomatoes:</strong> {film_data['rotten_tomatoes']}</p>
