@@ -40,7 +40,7 @@ st.markdown(
             margin-bottom: 30px;
         }
         .kpi-box {
-            flex: 1 1 200px;  /* Más flexible */
+            flex: 1 1 215px;  /* Más flexible */
             max-width: 260px;
             min-width: 180px;
             background-color: #bcbcbc;
@@ -51,18 +51,19 @@ st.markdown(
         }
         .kpi-title {
             color: #333;
-            font-size: 14px;
+            font-size: 13px;
             margin-bottom: -10px;
         }
         .kpi-value {
             color: #1f77b4;
-            font-size: 17px;
+            font-size: 12px;
             margin-top: 2px;
         }
     </style>
     """,
     unsafe_allow_html=True,
 )
+
 
 # -----------------------------------------------------------------------------------
 # ---- TÍTULO ----
