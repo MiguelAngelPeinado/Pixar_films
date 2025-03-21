@@ -35,27 +35,27 @@ st.markdown(
         .kpi-container {
             display: flex;
             justify-content: flex-start;
-            max-width: 100%;
-            margin-bottom: 40px;
             flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
         }
         .kpi-box {
+            flex: 1 1 250px; /* Permite que crezca y reduzca, con base de 250px */
+            max-width: 300px; /* Para que no se estiren mucho en pantallas grandes */
             background-color: #bcbcbc;
             padding: 8px 5px;
             height: 100px;
             border-radius: 10px;
             text-align: center;
-            width: 320px;
-            margin-right: 20px;
         }
         .kpi-title {
             color: #333;
-            font-size: 18px;
+            font-size: 16px;
             margin-bottom: -15px;
         }
         .kpi-value {
             color: #1f77b4;
-            font-size: 23px;
+            font-size: 18px;
             margin-top: 0px;
         }
     </style>
