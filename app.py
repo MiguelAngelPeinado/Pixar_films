@@ -29,18 +29,18 @@ st.markdown(
         }
         .custom-title {
             font-family: 'Cinzel', serif;
-            font-size: 40px;  /* Reducido un poco */
+            font-size: 40px;
             color: #333333;
         }
         .kpi-container {
             display: flex;
-            justify-content: center;  /* Centrado para pantallas grandes */
-            flex-wrap: nowrap; /* Que no salten */
+            justify-content: center;
+            flex-wrap: nowrap;
             gap: 10px;
             margin-bottom: 30px;
         }
         .kpi-box {
-            flex: 1 1 215px;  /* Más flexible */
+            flex: 1 1 215px;
             max-width: 260px;
             min-width: 180px;
             background-color: #bcbcbc;
@@ -52,18 +52,18 @@ st.markdown(
         .kpi-title {
             color: #333;
             font-size: 13px;
-            margin-bottom: -10px;
+            margin-bottom: -5px;
+            font-weight: bold;
         }
         .kpi-value {
             color: #1f77b4;
-            font-size: 12px;
-            margin-top: 2px;
+            font-size: 16px;
+            margin-top: 4px;
         }
     </style>
     """,
     unsafe_allow_html=True,
 )
-
 
 # -----------------------------------------------------------------------------------
 # ---- TÍTULO ----
@@ -83,9 +83,7 @@ def render_title():
 # ---- KPIs ----
 def render_kpis():
     total_box_office = df["box_office_worldwide"].sum()
-    most_productive_year = int(
-        df.groupby("year")["box_office_worldwide"].sum().idxmax()
-    )
+    most_productive_year = int(df.groupby("year")["box_office_worldwide"].sum().idxmax())
     most_profitable_film = df.loc[df["profit_margin"].idxmax()]["film"]
 
     st.subheader("Key Metrics")
@@ -94,16 +92,16 @@ def render_kpis():
         f"""
         <div class="kpi-container">
             <div class="kpi-box">
-                <h4 class="kpi-title">💰 Total Worldwide Box Office</h4>
-                <h2 class="kpi-value">$ {total_box_office:,.1f} M. (USD)</h2>
+                <div class="kpi-title">💰 Total Worldwide Box Office</div>
+                <div class="kpi-value">$ {total_box_office:,.1f} M. (USD)</div>
             </div>
             <div class="kpi-box">
-                <h4 class="kpi-title">📅 Most Productive Year</h4>
-                <h2 class="kpi-value">{most_productive_year}</h2>
+                <div class="kpi-title">📅 Most Productive Year</div>
+                <div class="kpi-value">{most_productive_year}</div>
             </div>
             <div class="kpi-box">
-                <h4 class="kpi-title">🏆 Most Profitable Film</h4>
-                <h2 class="kpi-value">{most_profitable_film}</h2>
+                <div class="kpi-title">🏆 Most Profitable Film</div>
+                <div class="kpi-value">{most_profitable_film}</div>
             </div>
         </div>
         """,
