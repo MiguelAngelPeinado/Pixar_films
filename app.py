@@ -300,8 +300,8 @@ def render_additional_charts(df, selected_year):
 
     fig_scatter.update_traces(marker=dict(size=12, line=dict(width=1, color="#333333")))
     fig_scatter.update_layout(
-        width=700,
-        height=600,
+        # width=700,
+        # height=600,
         title_font=dict(size=18, family="Arial Black", color="#333333"),
         xaxis_title_font=dict(size=14, family="Arial Black", color="#333333"),
         yaxis_title_font=dict(size=14, family="Arial Black", color="#333333"),
@@ -369,8 +369,8 @@ def render_additional_charts(df, selected_year):
             borderwidth=1,
             font=dict(size=12, color="#333333"),
         ),
-        width=700,
-        height=600,
+        # width=700,
+        # height=600,
         plot_bgcolor="#f5f5f5",
         paper_bgcolor="#f5f5f5",
         xaxis=dict(
