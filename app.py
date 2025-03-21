@@ -155,7 +155,7 @@ def render_sidebar_filters():
     # 🚀 CITA MOTIVACIONAL
     st.sidebar.markdown(
         """
-        <p style='color: lightgrey; font-size:16px; text-align:center; margin-top:210px;'>
+        <p style='color: #333; font-size:16px; text-align:center; margin-top:210px;'>
             "To infinity... and beyond!"
         </p>
         """,
@@ -167,7 +167,7 @@ def render_sidebar_filters():
         """
         <p style='text-align:center; font-size:15px; margin-top:16px;'>
             <a href='https://www.pixar.com' target='_blank' style='color:#ff4b4b; text-decoration:none;'>www.pixar.com</a> <br>
-            <span style='color:#999999;'>© Disney / Pixar</span>
+            <span style='color:#333;'>© Disney / Pixar</span>
         </p>
         """,
         unsafe_allow_html=True,
